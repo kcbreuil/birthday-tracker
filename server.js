@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.use(express.json());
-app.use(birthdayRouter);
+app.use('/birthdays', birthdayRouter);
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
